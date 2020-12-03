@@ -31,6 +31,9 @@ impl Config {
     }
 }
 
+/// 指定されたテキストファイルから、指定された文字列を含む行のみを標準出力する
+///
+/// ここに `Markdown` でドキュメントを書くことができる
 pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     let mut f = File::open(config.filename)?;
     let mut contents = String::new();
